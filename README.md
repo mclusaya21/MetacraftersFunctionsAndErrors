@@ -1,6 +1,7 @@
 # MetacraftersFunctionsAndErrors
 This assessment demonstrates a smart contract that implements the require(), assert(), and revert() statements.
-#Description
+
+# Description
 Solidity has numerous error-handling features. Runtime or compile-time errors are also possible. Runtime mistakes are more harder to detect and mostly arise during contract execution, whereas syntax problems are checked during compile time when Solidity is turned to byte code.
 #Getting Started
 To run this code go to https://remix.ethereum.org/. Create a new file (example FunctionsandErrors.sol) and paste the code below
@@ -36,6 +37,7 @@ contract FunctionsAndErrors {
         return _value * 2;
     }
 }
-#Author
+
+# Author
 Lusaya, Maria Carmela J.
 Email: 8210131@ntc.edu.ph
