@@ -20,7 +20,7 @@ contract FunctionsAndErrors {
    }
 
    function revertError() public pure {
-    string memory errorMessage = "This transaction has been reverted.";
+    string memory errorMessage = "Transaction reverted.";
     revert(errorMessage);
 
    }
