@@ -11,33 +11,30 @@ To run this code go to https://remix.ethereum.org/. Create a new file (example F
 pragma solidity ^0.8.25;
 
 contract FunctionsAndErrors {
-    uint256 public totalAmount;
-    
-    constructor(uint256 _initialAmount) {
-        require(_initialAmount > 0, "Initial amount must be greater than zero");
-        totalAmount = _initialAmount;
-    }
-    
-    function increaseAmount(uint256 _amount) public {
-        uint256 newTotalAmount = totalAmount + _amount;
-        require(newTotalAmount > totalAmount, "Overflow detected");
-        totalAmount = newTotalAmount;
-    }
-    
-    function assertExample(uint256 _value) public pure returns (uint256) {
-        uint256 result = _value * 2;
-        assert(result > _value);
-        return result;
-    }
-    
-    function revertExample(uint256 _value) public pure returns (uint256) {
-        require(_value != 0, "Value cannot be zero");
-        if (_value > 100) {
-            revert("Value exceeds maximum limit");
-        }
-        return _value * 2;
-    }
+   
+   function requireNum(uint256 _num) public pure returns(uint256){
+
+    uint256 minValue = 1;
+    require(_num > minValue, "Number must be greater than 1");
+    return _num;
+   }
+
+   function assertNum(uint256 _num) public pure returns(uint256) {
+
+    uint256 valueIncrease = 5;
+    uint256 result = _num + valueIncrease;
+    assert(result > _num);
+    return result;
+   }
+
+   function revertError() public pure {
+    string memory errorMessage = "This transaction has been reverted.";
+    revert(errorMessage);
+
+   }
+
 }
+
 
 # Author
 Lusaya, Maria Carmela J.
